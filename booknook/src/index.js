@@ -5,8 +5,11 @@ import './index.css';
 import Layout from './Layout';
 
 import Home from './pages/Home';
-import About from './pages/About';
-import Blog from './pages/Blog';
+import AboutUs from './pages/AboutUs';
+import BookCatalog from './pages/BookCatalog';
+import CommunityCorner from './pages/CommunityCorner';
+import ShoppingCart from './pages/ShoppingCart';
+import BookDetails from './pages/BookDetails';
 import Nopage from './pages/Nopage';
 
 function App() {
@@ -15,8 +18,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />}/>
-          <Route path="about" element={<About />}/>
-          <Route path="blog" element={<Blog />}/>
+          <Route path="aboutus" element={<AboutUs />}/>
+          <Route path="bookcatalog" element={<BookCatalog />}/>
+          <Route path="communitycorner" element={<CommunityCorner />}/>
+          <Route path="shoppingcart" element={<ShoppingCart />}/>
+          <Route path="bookdetails/:id" element={<BookDetails />}/>
           <Route path="*" element={<Nopage />}/>
         </Route>
       </Routes>

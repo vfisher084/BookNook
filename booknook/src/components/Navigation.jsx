@@ -1,5 +1,5 @@
 import "./css/Navigation.css";
-import {Outlet, Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 function Navigation() {
     return(
@@ -12,11 +12,11 @@ function Navigation() {
                     <div></div>
                 </div>
                 <ul id="nav-items" class="nav-columns hide-small">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="book-catalog.html">Book Catalog</a></li>
-                    <li><a href="community-corner.html">Community Corner</a></li>
-                    <li><a href="shopping-cart.html">Shopping Cart</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/aboutus">About Us</Link></li>
+                    <li><Link to="/bookcatalog">Book Catalog</Link></li>
+                    <li><Link to="/communitycorner">Community Corner</Link></li>
+                    <li><Link to="/shoppingcart">Shopping Cart</Link></li>
                 </ul>
             </nav>
         </div>

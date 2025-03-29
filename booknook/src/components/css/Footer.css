@@ -1,5 +1,7 @@
 footer {
-    background: lightpink;
     text-align: center;
+    background: var(--header-footer-background-color);
     padding: 10px;
+    outline: 2px solid var(--big-container-outline-color);
+    border-radius: 5px;
 }

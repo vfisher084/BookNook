@@ -1,0 +1,47 @@
+.new-and-popular,
+.classics,
+.fiction,
+.non-fiction {
+    display: flex;
+    align-items: center;
+    flex-shrink: 20%;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+#home-imgs {
+    padding: 20px;
+    display: flex; 
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+    min-width: 100px;  
+    outline: 2px solid var(--header-footer-background-color);
+    background: var(--nav-background-color);
+    border-radius: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    padding: 0px;
+    display: block;
+    box-shadow: 5px 5px 5px gray; 
+}
+
+#book {
+    padding: 5px;
+}
+
+/** Larger resolutions **/
+@media only screen and (min-width: 768px) {
+
+    .home-imgs {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        min-width: 800px;
+        min-height: 200px;
+    }
+}

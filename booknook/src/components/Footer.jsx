@@ -3,7 +3,7 @@ import "./css/Footer.css";
 function Footer() {
     return(
         <footer>
-            <h4>vfisher084</h4>
+            <p>&copy;vfisher084</p>
         </footer>
     );
 }
