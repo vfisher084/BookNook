@@ -1,5 +1,8 @@
-header {
-    background: lightpink;
+
+#booknook-header {
+    background: var(--header-footer-background-color);
     text-align: center;
-    padding: 10px;
+    padding: 0.5px;
+    outline: 2px solid var(--big-container-outline-color);
+    border-radius: 5px;
 }
