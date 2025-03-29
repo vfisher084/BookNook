@@ -1,6 +1,6 @@
 {
   "homepage": "/BookNook",
-  "name": "BookNook",
+  "name": "booknook",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
