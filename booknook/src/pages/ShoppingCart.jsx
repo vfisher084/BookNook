@@ -6,8 +6,8 @@ function ShoppingCart() {
             <div id="my-cart">
                 <h2>My Cart</h2>
             </div>
-            <main class="main-container">
-                <div class="container1">
+            <main class="main-container-sc">
+                <div class="container1-sc">
                     <section id="order-summary">
                         <h3>Order Summary</h3>
                         <section id="cart-books">
@@ -38,7 +38,7 @@ function ShoppingCart() {
                         </section>
                     </section>
                 </div>
-                <div class="container2">
+                <div class="container2-sc">
                     <section id="quantity">
                         <h4>Quantity:</h4>
                     </section>

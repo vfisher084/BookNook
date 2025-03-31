@@ -1,4 +1,4 @@
-main {
+#main-container-au {
     display: flex;
     flex-direction: column;
     align-items: space-evenly;
@@ -6,7 +6,7 @@ main {
     margin-bottom: 20px;
 }
 
-.container1 {
+.container1-au {
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-evenly;
@@ -16,7 +16,7 @@ main {
     outline: 1px solid var(--container-outline-color);
 }
 
-.container2 {
+.container2-au {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -26,7 +26,7 @@ main {
     outline: 1px solid var(--container-outline-color);
 }
 
-.container3 {
+.container3-au {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -47,7 +47,7 @@ main {
     padding: 20px;
 }
 
-img {
+#img-au {
     outline: 2px solid var(--container-outline-color);
     padding: 10px;
 }
@@ -59,7 +59,7 @@ h1 {
     color: var(--h1-color);
 }
 
-#page-title {
+#page-title-au {
     text-align: center;
     color: black;
 }
@@ -77,8 +77,8 @@ h4 {
 /** Larger resolutions **/
 @media only screen and (min-width: 768px) {
 
-    .container1,
-    .container2 {
+    .container1-au,
+    .container2-au {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;

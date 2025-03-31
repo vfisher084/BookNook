@@ -21,31 +21,31 @@ function BookCatalog() {
 
     return(
         <>
-          <main class="main-container">
-            <div class="container1">
-                <section class="genre-menu">
+          <main className="main-container-bc">
+            <div className="container1-bc">
+                <section className="genre-menu">
                     <h4>Genre Menu Placeholder</h4>
                 </section>
-                <section class="price-menu">
+                <section className="price-menu">
                     <h4>Price Menu Placeholder</h4>
                 </section>
-                <section class="category-menu">
+                <section className="category-menu">
                     <h4>Category Menu Placeholder</h4>
                 </section>
-                <section class="format-menu">
+                <section className="format-menu">
                     <h4>Format Menu Placeholder</h4>
                 </section>
-                <section class="publication-date-menu">
+                <section className="publication-date-menu">
                     <h4>Publication Date Menu Placeholder</h4>
                 </section>
-                <section class="ratings-menu">
+                <section className="ratings-menu">
                     <h4>Ratings Menu Placeholder</h4>
                 </section>
             </div>
-            <div className="container2">
+            <div className="container2-bc">
                 {books.map((book) => (
-                    <section class="book-container">
-                        <Link to={'/BookDetails/${book.id}'}>
+                    <section key={book.id} className="book-container-bc">
+                        <Link to={`/bookdetails/${book.id}`}>
                             <Book title={book.title} author={book.author} image={book.image} />
                         </Link>
                     </section>

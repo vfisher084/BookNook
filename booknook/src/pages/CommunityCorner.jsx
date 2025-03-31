@@ -1,23 +1,24 @@
 import "./css/CommunityCorner.css";
+import {Link} from "react-router-dom";
 
 function CommunityCorner() {
     return(
         <>
-            <div id="page-title">
+            <div id="page-title-cc">
                 <h2>🕮 Community Corner 🕮</h2>
             </div>
             <div id="quote">
                 <h3><em>"We read to know we are not alone"</em> -C.S. Lewis</h3>
             </div>
-            <div class="big-container">
-            <div class="container3">
-                <a href="book-details.html">
-                <img src="images/inheritance-games.jpg"></img>
-                <h4>Check out the most-discussed book of the week!</h4>
-            </a>
+            <div className="big-container-cc">
+            <div className="container3-cc">
+                <Link to="/bookdetails">
+                    <img id="img-cc" src="images/inheritance-games.jpg" />
+                    <h4>Check out the most-discussed book of the week!</h4>
+                </Link>
             </div>
-            <main class="main-container">
-                <div class="container1">
+            <main className="main-container-cc">
+                <div className="container1-cc">
                     <h3>Discussions</h3>
                     <section id="discussions">
                         <section id="topics">
@@ -26,7 +27,7 @@ function CommunityCorner() {
                         </section>
                     </section>
                 </div>
-                <div class="container2">
+                <div className="container2-cc">
                     <section id="create-discussion">
                         <h4>Create a Discussion</h4>
                         <section id="info">

@@ -4,14 +4,14 @@ import {Link} from "react-router-dom";
 function Navigation() {
     return(
         <>
-           <div class="nav-container">
+           <div className="nav-container">
             <nav id="main-nav">
                 <div id="toggle-nav">
                     <div></div>
                     <div></div>
                     <div></div>
                 </div>
-                <ul id="nav-items" class="nav-columns hide-small">
+                <ul id="nav-items" className="nav-columns hide-small">
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/aboutus">About Us</Link></li>
                     <li><Link to="/bookcatalog">Book Catalog</Link></li>
@@ -19,7 +19,7 @@ function Navigation() {
                     <li><Link to="/shoppingcart">Shopping Cart</Link></li>
                 </ul>
             </nav>
-        </div>
+            </div>
         </>
     );
 }

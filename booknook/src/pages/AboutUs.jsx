@@ -3,11 +3,11 @@ import "./css/AboutUs.css";
 function AboutUs() {
     return(
         <>
-            <h2 id="page-title">About Us</h2>
-        <main>
-            <div class="container1">
+            <h2 id="page-title-au">About Us</h2>
+        <main id="main-container-au">
+            <div className="container1-au">
                 <section id="story-img">
-                    <img src="images/our-story.jpg"></img>
+                    <img id="img-au" src="images/our-story.jpg" alt="images/our-story.jpg" />
                 </section>
                 <section id="story-info">
                     <h3><strong>Our Story</strong></h3>
@@ -23,7 +23,7 @@ function AboutUs() {
                     </p>
                 </section>
             </div>
-            <div class="container2">
+            <div className="container2-au">
                 <section id="mission-info">
                     <h3><strong>Our Mission</strong></h3>
                     <p>
@@ -35,7 +35,7 @@ function AboutUs() {
                     </p>
                 </section>
                 <section id="mission-img">
-                    <img src="images/our-mission.jpg"></img>
+                    <img id="img-au" src="images/our-mission.jpg" alt ="images/our-mission.jpg" />
                 </section>
             </div>
         </main>
