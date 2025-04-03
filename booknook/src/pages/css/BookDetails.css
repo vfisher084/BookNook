@@ -67,28 +67,14 @@
     margin-bottom: 30px;
 }
 
-#book {
-    padding: 10px;
-}
-
-#book a {
-    color: black;
-    text-decoration: none;
-}
-
 /** Typography **/
 
-h1 {
-    font-size: 60px;
-    color: var(--h1-color);
-}
-
-h2 {
+#h2-bd {
     font-weight: 100;
 }
 
-h3,
-h4 {
+#h3-bd,
+#h4-bd {
     font-weight: lighter;
 }
 

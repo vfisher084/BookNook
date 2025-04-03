@@ -1,6 +1,6 @@
-import "./css/Book.css";
+import "./css/Book-BC.css";
 
-function Book({title, author, image}) {
+function BookBC({title, author, image}) {
     return (
         <>
             <section id="book-img-bc">
@@ -13,4 +13,4 @@ function Book({title, author, image}) {
     )
 }
 
-export default Book;
+export default BookBC;

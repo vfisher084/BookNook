@@ -1,4 +1,7 @@
 import "./css/AboutUs.css";
+import ourStory from "../images/our-story.jpg";
+import ourMission from "../images/our-mission.jpg";
+
 
 function AboutUs() {
     return(
@@ -7,10 +10,10 @@ function AboutUs() {
         <main id="main-container-au">
             <div className="container1-au">
                 <section id="story-img">
-                    <img id="img-au" src="images/our-story.jpg" alt="images/our-story.jpg" />
+                    <img id="img-au" src={ourStory} alt="Our Story" />
                 </section>
                 <section id="story-info">
-                    <h3><strong>Our Story</strong></h3>
+                    <h3 id="h3-au"><strong>Our Story</strong></h3>
                     <p>
                         BookNook was created out of a love for books and a passion for bringing readers
                         together. As avid book readers, we wanted to create
@@ -25,7 +28,7 @@ function AboutUs() {
             </div>
             <div className="container2-au">
                 <section id="mission-info">
-                    <h3><strong>Our Mission</strong></h3>
+                    <h3 id="h3-au"><strong>Our Mission</strong></h3>
                     <p>
                         At BookNook, our mission is simple: to make finding and discussing books easier and more engaging for everyone.
                         We believe that books have the power to inspire, educate, and bring people together, which is why we offer an
@@ -35,7 +38,7 @@ function AboutUs() {
                     </p>
                 </section>
                 <section id="mission-img">
-                    <img id="img-au" src="images/our-mission.jpg" alt ="images/our-mission.jpg" />
+                    <img id="img-au" src={ourMission} alt ="Our Mission" />
                 </section>
             </div>
         </main>

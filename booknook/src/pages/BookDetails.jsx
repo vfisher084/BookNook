@@ -9,7 +9,7 @@ function BookDetails() {
                         <img id="img-bd" src="images/220x250.png" />
                     </section>
                     <section id="book-info">
-                        <h3>$$$</h3>
+                        <h3 id="h3-bd">$$$</h3>
                         <p>Book Title:
                             <br/> Author: 
                         </p>
@@ -21,21 +21,21 @@ function BookDetails() {
                 <div className="container2-bd">
                     <section id="r-q-f">
                         <section id="reviews">
-                            <h4><strong>Top Reviews</strong></h4>
+                            <h4 id="h4-bd"><strong>Top Reviews</strong></h4>
                         </section>
                         <section id="quantity">
-                            <h4>Select Quantity Button Here</h4>
+                            <h4 id="h4-bd">Select Quantity Button Here</h4>
                         </section>
                         <section id="format">
-                            <h4>Format Selection Button Here</h4>
+                            <h4 id="h4-bd">Format Selection Button Here</h4>
                         </section>
                     </section>
                     <section id="add-to-cart">
-                        <h3>Add to Cart Button Here</h3>
+                        <h3 id="h3-bd">Add to Cart Button Here</h3>
                     </section>
                     <section id="similar-section">
                         <section id="similar-title">
-                            <h4>Discover similar books & more information:</h4>
+                            <h4 id="h4-bd">Discover similar books & more information:</h4>
                         </section>
                         <section id="similar-books">
                         </section>

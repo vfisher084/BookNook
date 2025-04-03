@@ -1,15 +1,10 @@
-/*
+
 #toggle-nav div {
     width:35px;
     height:2px;
     background-color: black;
     margin: 6px 0;
 }
-
-#toggle-nav {
-    cursor: pointer;
-}
-    */
 
 #main-nav ul {
     padding-left:0;
@@ -35,19 +30,33 @@
     color: var(--h1-color);
 }
 
-/*
+
 .hide-small {
     display: none;
 }
-    */
+
+#main-nav button {
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 0;
+    border: none;
+    background: none;
+
+}
 
 /** Larger resolutions **/
 @media only screen and (min-width: 768px) {
-    .nav-columns {
+
+    #nav-items {
         display: flex;
+        flex-direction: row;
     }
 
     #main-nav li{
         flex: 1;
+    }
+
+    #main-nav button {
+        display: none;
     }
 }

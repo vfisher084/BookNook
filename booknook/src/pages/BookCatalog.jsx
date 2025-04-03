@@ -1,6 +1,6 @@
 import './css/BookCatalog.css';
-import Book from '../components/Book';
 import { Link } from "react-router-dom";
+import BookBC from '../components/Book-BC';
 
 function BookCatalog() {
 
@@ -24,29 +24,29 @@ function BookCatalog() {
           <main className="main-container-bc">
             <div className="container1-bc">
                 <section className="genre-menu">
-                    <h4>Genre Menu Placeholder</h4>
+                    <h4 id="h4-bc">Genre Menu Placeholder</h4>
                 </section>
                 <section className="price-menu">
-                    <h4>Price Menu Placeholder</h4>
+                    <h4 id="h4-bc">Price Menu Placeholder</h4>
                 </section>
                 <section className="category-menu">
-                    <h4>Category Menu Placeholder</h4>
+                    <h4 id="h4-bc">Category Menu Placeholder</h4>
                 </section>
                 <section className="format-menu">
-                    <h4>Format Menu Placeholder</h4>
+                    <h4 id="h4-bc">Format Menu Placeholder</h4>
                 </section>
                 <section className="publication-date-menu">
-                    <h4>Publication Date Menu Placeholder</h4>
+                    <h4 id="h4-bc">Publication Date Menu Placeholder</h4>
                 </section>
                 <section className="ratings-menu">
-                    <h4>Ratings Menu Placeholder</h4>
+                    <h4 id="h4-bc">Ratings Menu Placeholder</h4>
                 </section>
             </div>
             <div className="container2-bc">
                 {books.map((book) => (
                     <section key={book.id} className="book-container-bc">
                         <Link to={`/bookdetails/${book.id}`}>
-                            <Book title={book.title} author={book.author} image={book.image} />
+                            <BookBC title={book.title} author={book.author} image={book.image} />
                         </Link>
                     </section>
                 ))}

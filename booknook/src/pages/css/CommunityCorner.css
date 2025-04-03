@@ -48,19 +48,15 @@
 
 /** Typography **/
 
-h1 {
-    font-size: 60px;
-    color: var(--h1-color);
-}
-
-h2 {
+#h2-cc {
     font-weight: 100;
     color: black;
 }
 
-h3,
-h4 {
+#h3-cc,
+#h4-cc {
     font-weight: lighter;
+    color: black;
 }
 
 #quote h3 {
@@ -68,7 +64,7 @@ h4 {
     color: var(--header-footer-background-color);
 }
 
-a {
+#link-cc {
     text-decoration: none;
     color: black;
 }

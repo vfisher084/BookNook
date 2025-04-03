@@ -54,11 +54,6 @@
 
 /** Typography **/
 
-h1 {
-    font-size: 60px;
-    color: var(--h1-color);
-}
-
 #page-title-au {
     text-align: center;
     color: black;
@@ -68,8 +63,7 @@ h2 {
     font-weight: 100;
 }
 
-h3,
-h4 {
+#h3-au {
     font-weight: lighter;
     color: var(--header-footer-background-color);
 }
@@ -93,5 +87,10 @@ h4 {
     #story-img,
     #mission-img {
         padding: 40px;
+    }
+
+    #textbox {
+        width: 600px;
+        height: 100px;
     }
 }
