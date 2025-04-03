@@ -22,7 +22,7 @@ function Navigation() {
                     </div>
                 </button>
                 <ul id="nav-items" className={menuOpen?"":"hide-small"} >
-                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/home">Home</Link></li>
                     <li><Link to="/aboutus">About Us</Link></li>
                     <li><Link to="/bookcatalog">Book Catalog</Link></li>
                     <li><Link to="/communitycorner">Community Corner</Link></li>
