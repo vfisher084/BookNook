@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/BookNook/static/css/main.487ecb05.css",
-    "main.js": "/BookNook/static/js/main.196af680.js",
+    "main.js": "/BookNook/static/js/main.aaeb45ea.js",
     "static/media/our-mission.jpg": "/BookNook/static/media/our-mission.b0b845cd969beb993e6f.jpg",
     "static/media/our-story.jpg": "/BookNook/static/media/our-story.0db46535dac48ee4d961.jpg",
     "index.html": "/BookNook/index.html",
     "main.487ecb05.css.map": "/BookNook/static/css/main.487ecb05.css.map",
-    "main.196af680.js.map": "/BookNook/static/js/main.196af680.js.map"
+    "main.aaeb45ea.js.map": "/BookNook/static/js/main.aaeb45ea.js.map"
   },
   "entrypoints": [
     "static/css/main.487ecb05.css",
-    "static/js/main.196af680.js"
+    "static/js/main.aaeb45ea.js"
   ]
 }
