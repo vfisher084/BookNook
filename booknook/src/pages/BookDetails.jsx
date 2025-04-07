@@ -13,7 +13,7 @@ function BookDetails() {
         (async () => {
             const response = await axios.get(
                 //"http://localhost:3001/api/books"
-                "https://https://booknook-server.onrender.com/api/books"
+                "https://booknook-server.onrender.com/api/books"
             );
             const allBooks = response.data;
 
