@@ -1,23 +1,27 @@
 import './css/BookCatalog.css';
-import { Link } from "react-router-dom";
 import BookBC from '../components/Book-BC';
+
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
+
 
 function BookCatalog() {
 
-    const books = [
-        {id: 1, title: "Fourth Wing", author: "Rebecca Yarros", image: "images/fourthwing.jpg"},
-        {id: 1, title: "Fourth Wing", author: "Rebecca Yarros", image: "images/fourthwing.jpg"},
-        {id: 1, title: "Fourth Wing", author: "Rebecca Yarros", image: "images/fourthwing.jpg"},
-        {id: 1, title: "Fourth Wing", author: "Rebecca Yarros", image: "images/fourthwing.jpg"},
-        {id: 1, title: "Fourth Wing", author: "Rebecca Yarros", image: "images/fourthwing.jpg"},
-        {id: 1, title: "Fourth Wing", author: "Rebecca Yarros", image: "images/fourthwing.jpg"},
-        {id: 1, title: "Fourth Wing", author: "Rebecca Yarros", image: "images/fourthwing.jpg"},
-        {id: 1, title: "Fourth Wing", author: "Rebecca Yarros", image: "images/fourthwing.jpg"},
-        {id: 1, title: "Fourth Wing", author: "Rebecca Yarros", image: "images/fourthwing.jpg"},
-        {id: 1, title: "Fourth Wing", author: "Rebecca Yarros", image: "images/fourthwing.jpg"},
-        {id: 1, title: "Fourth Wing", author: "Rebecca Yarros", image: "images/fourthwing.jpg"},
-        {id: 1, title: "Fourth Wing", author: "Rebecca Yarros", image: "images/fourthwing.jpg"}
-    ]
+    const [books, setBooks] = useState([]);
+
+    useEffect(() => {
+        (async () => {
+            const response = await axios.get(
+                "https://booknook-server.onrender.com/api/books"
+            );
+            const allBooks = response.data;
+
+            //only need books 1-12 for this page (for now at least)
+            const filteredBooks = allBooks.filter(book => book.id >= 1 && book.id <= 12);
+            setBooks(filteredBooks);
+        })();
+    }, []);
 
     return(
         <>

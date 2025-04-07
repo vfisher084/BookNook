@@ -1,20 +1,48 @@
 import "./css/BookDetails.css";
 
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import axios from 'axios';
+
 function BookDetails() {
+
+    const { id } = useParams();
+    const [book, setBook] = useState({});
+
+    useEffect(() => {
+        (async () => {
+            const response = await axios.get(
+                //"http://localhost:3001/api/books"
+                "https://https://booknook-server.onrender.com/api/books"
+            );
+            const allBooks = response.data;
+
+            const selectedBook = allBooks.find((book) => book.id === parseInt(id));
+            setBook(selectedBook);
+        })();
+    }, [id]);
+
+    if(!book) {
+        return <div>Loading...</div>;
+    }
+
+    console.log("book.image:", book.image);
+
     return(
         <>
             <main className="main-container-bd">
                 <div className="container1-bd">
                     <section id="book-img-bd">
-                        <img id="img-bd" src="images/220x250.png" />
+                        <img id="img-bd" src={`/${book.image}`} alt={book.title} />
                     </section>
                     <section id="book-info">
-                        <h3 id="h3-bd">$$$</h3>
-                        <p>Book Title:
-                            <br/> Author: 
+                        <h3 id="h3-bd">${book.price}</h3>
+                        <p><strong>Book Title:</strong> {book.title}
+                            <br/>
+                            <strong>Author:</strong> {book.author}
                         </p>
                         <p>
-                            Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            <strong>Description:</strong> {book.description}
                         </p>
                     </section>
                 </div>
@@ -22,12 +50,19 @@ function BookDetails() {
                     <section id="r-q-f">
                         <section id="reviews">
                             <h4 id="h4-bd"><strong>Top Reviews</strong></h4>
+                            {book.reviews && book.reviews.length > 0 ? (
+                                book.reviews.map((review, index) => (
+                                <p key={index}>{review}</p>
+                                ))
+                                ) : (
+                                    <p>No reviews available.</p>
+                            )}
                         </section>
                         <section id="quantity">
-                            <h4 id="h4-bd">Select Quantity Button Here</h4>
+                            <h4 id="h4-bd">Quantity Available: {book.quantity}</h4>
                         </section>
                         <section id="format">
-                            <h4 id="h4-bd">Format Selection Button Here</h4>
+                            <h4 id="h4-bd">Available Formats: {book.format}</h4>
                         </section>
                     </section>
                     <section id="add-to-cart">

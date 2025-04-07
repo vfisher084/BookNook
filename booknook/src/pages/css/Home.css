@@ -22,19 +22,11 @@
     border-radius: 10px;
 }
 
-#img-home {
-    max-width: 100%;
-    height: auto;
-    padding: 0px;
-    display: block;
-    box-shadow: 5px 5px 5px gray; 
-}
-
 
 /** Larger resolutions **/
 @media only screen and (min-width: 768px) {
 
-    .home-imgs {
+    #home-imgs {
         display: flex;
         justify-content: space-evenly;
         flex-direction: row;

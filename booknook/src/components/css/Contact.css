@@ -1,5 +1,17 @@
+.container3-au {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #eeece8;
+    border-radius: 10px;
+    outline: 1px solid var(--container-outline-color);
+    min-height: 200px;
+}
+
 #contact-us h3 {
     text-align: center;
+    color: var(--header-footer-background-color);
 }
 
 #form {
@@ -35,4 +47,13 @@
 
 #submit-btn:hover {
     background-color: var(--big-container-outline-color);
+}
+
+/** Larger resolutions **/
+@media only screen and (min-width: 768px) {
+    
+    #textbox {
+        width: 600px;
+        height: 100px;
+    }
 }

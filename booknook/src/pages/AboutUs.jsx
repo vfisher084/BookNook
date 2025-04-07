@@ -1,6 +1,8 @@
 import "./css/AboutUs.css";
+import "../components/css/Contact.css";
 import ourStory from "../images/our-story.jpg";
 import ourMission from "../images/our-mission.jpg";
+import Contact from "../components/Contact";
 
 
 function AboutUs() {
@@ -40,6 +42,9 @@ function AboutUs() {
                 <section id="mission-img">
                     <img id="img-au" src={ourMission} alt ="Our Mission" />
                 </section>
+            </div>
+            <div className="container3-au">
+                <Contact />
             </div>
         </main>
         </>

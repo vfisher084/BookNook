@@ -1,5 +1,5 @@
 import "./css/Contact.css";
-import "./pages/css/AboutUs.css";
+import "../pages/css/AboutUs.css";
 import React from "react";
 import {useState} from "react";
 
@@ -30,9 +30,9 @@ function Contact() {
   };
 
   return (
-    <div class="container3-au">
         <section id="contact-us">
-      <form onSubmit={onSubmit}>
+        <h3><strong>Contact Us!</strong></h3>
+      <form id="form" onSubmit={onSubmit}>
         <p id="enter-name">
             Name:
             <input type="text" name="name" required/>
@@ -49,8 +49,6 @@ function Contact() {
       </form>
       <span>{result}</span>
       </section>
-
-    </div>
   );
 }
 

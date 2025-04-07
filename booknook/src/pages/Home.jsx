@@ -1,36 +1,28 @@
 import './css/Home.css';
 import BookHome from '../components/Book-Home';
-import { Link } from 'react-router-dom';
+
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Home() {
 
-  const newBooks = [
-    {id: 1, image: "images/fourthwing.jpg"},
-    {id: 1, image: "images/fourthwing.jpg"},
-    {id: 1, image: "images/fourthwing.jpg"},
-    {id: 1, image: "images/fourthwing.jpg"}
-  ];
+  const [books, setBooks] = useState([]);
 
-  const classics = [
-    {id: 1, image: "images/fourthwing.jpg"},
-    {id: 1, image: "images/fourthwing.jpg"},
-    {id: 1, image: "images/fourthwing.jpg"},
-    {id: 1, image: "images/fourthwing.jpg"}
-  ];
+    useEffect(() => {
+        (async () => {
+            const response = await axios.get(
+                //"http://localhost:3001/api/books"
+                "https://booknook-server.onrender.com/api/books"
+            );
+            setBooks(response.data);
+        })();
+    }, []);
 
-  const fiction = [
-    {id: 1, image: "images/fourthwing.jpg"},
-    {id: 1, image: "images/fourthwing.jpg"},
-    {id: 1, image: "images/fourthwing.jpg"},
-    {id: 1, image: "images/fourthwing.jpg"}
-  ];
-
-  const nonFiction = [
-    {id: 1, image: "images/fourthwing.jpg"},
-    {id: 1, image: "images/fourthwing.jpg"},
-    {id: 1, image: "images/fourthwing.jpg"},
-    {id: 1, image: "images/fourthwing.jpg"}
-  ];
+  const newBooks = books.filter((book) => [13, 14, 15, 16].includes(book.id));
+  const classics = books.filter((book) => [17, 18, 19, 20].includes(book.id));
+  const fiction = books.filter((book) => [21, 9, 4, 22].includes(book.id));
+  const nonFiction = books.filter((book) => [23, 24, 25, 26].includes(book.id));
 
 
   return (
