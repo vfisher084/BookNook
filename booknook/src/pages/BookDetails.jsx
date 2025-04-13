@@ -32,8 +32,8 @@ function BookDetails() {
         <>
             <main className="main-container-bd">
                 <div className="container1-bd">
-                    <section id="book-img-bd">
-                        <img id="img-bd" src={`/${book.image}`} alt={book.title} />
+                    <section key={book._id} id="book-img-bd">
+                        <img id="img-bd" src={"http://localhost:3001/"+ book.image} alt={book.title} />
                     </section>
                     <section id="book-info">
                         <h3 id="h3-bd">${book.price}</h3>

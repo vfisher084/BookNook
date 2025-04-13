@@ -19,10 +19,10 @@ function Home() {
         })();
     }, []);
 
-  const newBooks = books.filter((book) => [13, 14, 15, 16].includes(book.id));
-  const classics = books.filter((book) => [17, 18, 19, 20].includes(book.id));
-  const fiction = books.filter((book) => [21, 9, 4, 22].includes(book.id));
-  const nonFiction = books.filter((book) => [23, 24, 25, 26].includes(book.id));
+  const newBooks = books.filter((book) => [13, 14, 15, 16].includes(book._id));
+  const classics = books.filter((book) => [17, 18, 19, 20].includes(book._id));
+  const fiction = books.filter((book) => [21, 9, 4, 22].includes(book._id));
+  const nonFiction = books.filter((book) => [23, 24, 25, 26].includes(book._id));
 
 
   return (
@@ -33,8 +33,8 @@ function Home() {
                     <h2>New & Popular</h2>
                     <div id="home-imgs">
                         {newBooks.map((book) => (
-                          <section key={book.id} className="book-home">
-                            <Link to={`/bookdetails/${book.id}`}>
+                          <section key={book._id} className="book-home">
+                            <Link to={`/bookdetails/${book._id}`}>
                               <BookHome image={book.image} />
                             </Link>
                           </section>
@@ -46,8 +46,8 @@ function Home() {
                     <h2>Popular Classics</h2>
                     <div id="home-imgs">
                         {classics.map((book) => (
-                          <section key={book.id} className="book-home">
-                            <Link to={`/bookdetails/${book.id}`}>
+                          <section key={book._id} className="book-home">
+                            <Link to={`/bookdetails/${book._id}`}>
                               <BookHome image={book.image} />
                             </Link>
                           </section>
@@ -59,8 +59,8 @@ function Home() {
                     <h2>Popular Fiction & Fantasy</h2>
                     <div id="home-imgs">
                         {fiction.map((book) => (
-                          <section key={book.id} className="book-home">
-                            <Link to={`/bookdetails/${book.id}`}>
+                          <section key={book._id} className="book-home">
+                            <Link to={`/bookdetails/${book._id}`}>
                               <BookHome image={book.image} alt={book.title} />
                             </Link>
                           </section>
@@ -72,8 +72,8 @@ function Home() {
                     <h2>Popular Non-fiction</h2>
                     <div id="home-imgs">
                     {nonFiction.map((book) => (
-                          <section key={book.id} className="book-home">
-                            <Link to={`/bookdetails/${book.id}`}>
+                          <section key={book._id} className="book-home">
+                            <Link to={`/bookdetails/${book._id}`}>
                               <BookHome image={book.image} alt={book.title} />
                             </Link>
                           </section>
