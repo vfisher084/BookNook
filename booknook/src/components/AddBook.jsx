@@ -34,13 +34,12 @@ const AddBook = (props) => {
     };
 
     return (
-        <div id="add-dialog" className="w3-modal">
+        <div id="add-dialog">
             <div className="modal-content">
                 <div className="modal-container">
                     <span id="dialog-close" className="modal-close" onClick={props.closeAddDialog}>&times;</span>
-                    <form id="add-property-form" onSubmit={addToServer}>
+                    <form id="add-book-form" onSubmit={addToServer}>
                         <h3>Add New Book</h3>
-
                         <p>
                             <label htmlFor="title">Book Title:</label>
                             <input type="text" id="title" name="title" required min="3"></input>

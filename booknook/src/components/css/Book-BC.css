@@ -11,3 +11,10 @@
 #title-author-info {
     text-align: left;
 }
+
+#change-buttons {
+    display: flex;
+    gap: 5px;
+    padding-bottom: 5px;
+}
+

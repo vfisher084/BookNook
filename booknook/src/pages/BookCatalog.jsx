@@ -77,9 +77,11 @@ function BookCatalog() {
             <div className="container2-bc">
                 {books.map((book) => (
                     <section key={book._id} className="book-container-bc">
-                        <Link to={`/bookdetails/${book._id}`}>
-                            <BookBC title={book.title} author={book.author} image={"https://booknook-server.onrender.com/" + book.image} />
-                        </Link>
+                        
+                            <BookBC 
+                            title={book.title} 
+                            author={book.author} 
+                            image={"https://booknook-server.onrender.com/" + book.image} />
                     </section>
                 ))}
             </div>
