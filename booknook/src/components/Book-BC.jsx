@@ -49,10 +49,10 @@ function BookBC({_id, title, author, image}) {
 
                 {showEditDialog?(
                     <EditBook
-                    title={title}
-                    author={author}
-                    image={image}
-                    _id={_id}
+                    title={book.title || title}
+                    author={book.aithor || author}
+                    image={book.image || image}
+                    _id={book._id || _id}
                     closeEditDialog = {closeEditDialog}
                     editBook = {editBook}
                     />):("")}
