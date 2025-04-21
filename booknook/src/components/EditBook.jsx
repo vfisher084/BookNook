@@ -5,6 +5,8 @@ const EditBook = (props) => {
     const [result, setResult] = useState("");
     const [prevSrc, setPrevSrc] = useState("");
 
+    console.log("EditBook received _id:", props._id);
+    
     const uploadImage = (event) => {
         setPrevSrc(URL.createObjectURL(event.target.files[0]));
     };
