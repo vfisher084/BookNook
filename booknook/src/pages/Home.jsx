@@ -19,10 +19,10 @@ function Home() {
         })();
     }, []);
 
-  const newBooks = books.filter((book) => [13, 14, 15, 16].includes(book._id));
-  const classics = books.filter((book) => [17, 18, 19, 20].includes(book._id));
-  const fiction = books.filter((book) => [21, 9, 4, 22].includes(book._id));
-  const nonFiction = books.filter((book) => [23, 24, 25, 26].includes(book._id));
+  const newBooks = books.filter((book) => [13, 14, 15, 16].includes(book.id));
+  const classics = books.filter((book) => [17, 18, 19, 20].includes(book.id));
+  const fiction = books.filter((book) => [21, 9, 4, 22].includes(book.id));
+  const nonFiction = books.filter((book) => [23, 24, 25, 26].includes(book.id));
 
 
   return (

@@ -20,12 +20,16 @@ function BookCatalog() {
                 "https://booknook-server.onrender.com/api/books"
             );
             const allBooks = response.data;
-
+            
             //only need books 1-12 for this page (for now at least)
-            const filteredBooks = allBooks.filter(book => book._id >= 1 && book._id <= 12);
-            setBooks(filteredBooks);
+            //const filteredBooks = allBooks.filter(book => book._id >= 1 && book._id <= 12);
+            //const filteredBooks = allBooks.slice(0,12);
+            //setBooks(filteredBooks);
+            setBooks(allBooks);
+            
         })();
     }, []);
+    
 
     const openAddDialog = () => {
         setShowAddDialog(true);
@@ -40,6 +44,14 @@ function BookCatalog() {
         setBooks((books)=>[...books, book]);
 
     }
+
+    const editBookInCatalog = (updatedBook) => {
+        setBooks((prevBooks) => 
+            prevBooks.map((book) => 
+                book._id === updatedBook._id ? updatedBook: book
+            )
+        );
+    };
 
     console.log(books);
     //console.log(showAddDialog);
@@ -82,7 +94,8 @@ function BookCatalog() {
                             _id={book._id}
                             title={book.title} 
                             author={book.author} 
-                            image={"https://booknook-server.onrender.com/" + book.image} />
+                            image={"https://booknook-server.onrender.com/" + book.image} 
+                            editBookInCatalog={editBookInCatalog} />
                     </section>
                 ))}
             </div>

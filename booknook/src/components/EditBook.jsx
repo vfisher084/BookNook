@@ -27,7 +27,9 @@ const EditBook = (props) => {
             setResult("Book edited successfully");
             event.target.reset();
             props.closeEditDialog();
-            props.editBook(await response.json());
+            const updatedBook = await response.json();
+            props.editBook(updatedBook);
+            props.editBookInCatalog(updatedBook);
         }
         else{
             setResult("Error editing book. Please try again.");
@@ -70,7 +72,7 @@ const EditBook = (props) => {
             <section className="columns">
                     <div>
                         <p id="img-prev-section">
-                            {prevSrc!=""?
+                            {prevSrc!==""?
                             (<img id="img-prev" src={prevSrc}></img>):
                             ("")
                             }

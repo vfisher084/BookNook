@@ -4,7 +4,7 @@ import EditBook from "./EditBook";
 import DeleteBook from "./DeleteBook";
 import { Link } from "react-router-dom";
 
-function BookBC({_id, title, author, image}) {
+function BookBC({_id, title, author, image, editBookInCatalog}) {
     const [book, setBook] = useState({});
     const [showEditDialog, setShowEditDialog] = useState(false);
     const [showDeleteDialog, setShowDeleteDialog] = useState(false);
@@ -55,6 +55,7 @@ function BookBC({_id, title, author, image}) {
                     _id={book._id || _id}
                     closeEditDialog = {closeEditDialog}
                     editBook = {editBook}
+                    editBookInCatalog={editBookInCatalog}
                     />):("")}
             
             <section id="change-buttons">
